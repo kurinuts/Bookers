@@ -1,5 +1,24 @@
-<h1>ようこそ<strong> Bookers <strong>へ！</h1>
-<p><strong>Bookers</strong>では、さまざまな書籍に関するあなたの意見や<br>
-印象を共有し交換することができます</p>
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Bookers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<%= link_to "start", "https://379991ad25cd42d4a8ac42e2dc0fe887.vfs.cloud9.us-east-1.amazonaws.com/books" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header>
+      <h1 class="heading">ようこそ<strong> Bookers <strong>へ！</h1>
+    </header>
+    <main>
+    <p class="main"><strong>Bookers</strong>では、さまざまな書籍に関するあなたの意見や<br></p>
+    <p class="main">印象を共有し交換することができます</p>
+    <p class="start"><%= link_to "start", "https://379991ad25cd42d4a8ac42e2dc0fe887.vfs.cloud9.us-east-1.amazonaws.com/books" %></p>
+    </main>
+  </body>
+</html>
