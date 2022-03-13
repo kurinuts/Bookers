@@ -8,7 +8,9 @@
 <h4>Body</h4>
 <span><%= book.body %></span>
 
-<span><%= link_to "show", "/books/#{book.id}" %></span>
+<span><%= link_to "Show", "/books/#{book.id}" %></span>
+<%= link_to "Edit", "/books/#{book.id}/edit" %>
+<%= link_to "Destroy", "/books/#{book.id}/destroy" %>
 <% end %>
 
 
@@ -22,5 +24,4 @@
 <%= f.text_area :body %>
 
 <%= f.submit 'create book' %>
-
 <% end %>
