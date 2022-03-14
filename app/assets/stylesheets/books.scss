@@ -5,13 +5,27 @@
 // Place allthe styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+  margin: 18px;
+  font-size: 18px;
+}
+
+thread {
+  display: table-header-group;
+  vertical-align: middle;
+  padding-bottom: 15px;
+}
 
 body {
-  margin: 15px;
+  margin: 33px;
 }
 
 table {
   display: table;
   margin: 15px;
+}
+
+td {
+  padding-bottpm: 5px;
 }
 
