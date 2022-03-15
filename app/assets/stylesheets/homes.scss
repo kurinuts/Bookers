@@ -4,16 +4,31 @@
   box-sizing: border-box;
 }
 
-header {
-  margin: 20px;
+body {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
 }
 
-.h1 > strong {
-  font-weight: bold;
+strong {
+  fotnt-weight: bold;
 }
-
 
 p {
+  display: block;
+  font-size: 13px;
+  line-height: 18px;
   margin: 33px;
-  font-size: 18px;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-raight: 5px;
+  padding-top: 1px;
+}
+
+h2 {
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
