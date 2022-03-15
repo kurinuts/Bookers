@@ -1,2 +1,50 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<html>
+  <head></head>
+  <body>
+    <h1><strong>Editing Book</strong></h1>
+    <%= form_with model: @book, url: update_book_path(@book.id), method: :patch do |f| %>
+    
+    <div class="field">
+      <label for="book_title">Title</label><br>
+      <input class="book_title" type="text" name="book[title]" id="book_title">
+    </div>
+    
+    <div class="field">
+      <label for="book_body">Body</label><br>
+      <textarea class="book_body" name="book[body]" id="book_body"></textarea>
+    </div>
+    
+    <div class="actions"><%= f.submit 'Update Book' %></div>
+    <% end %>
+    
+    <a class="show"><%= link_to "Show", "/books/#{@book.id}" %></a>
+    |
+    <a class="Back"><%= link_to "Back", "https://379991ad25cd42d4a8ac42e2dc0fe887.vfs.cloud9.us-east-1.amazonaws.com/books" %></a>
+    
+    <style>
+  
+    body {
+      margin: 33px;
+    }
+    
+    h1 {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      margin-left: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .field {
+      margin-bottom: 10px;
+    }
+    
+    .actions {
+      margin-bottom: 10px;
+    }
+    </style>
+    
+    
+  </body>
+</html>

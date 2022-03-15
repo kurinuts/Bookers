@@ -1,2 +1,29 @@
-<h1>Books#show</h1>
-<p></p>
+<html>
+  <head>
+    
+  </head>
+  
+  <body>
+    <p><strong>Title:</strong><%= @book.title %></p>
+    
+    <p><strong>Body:</strong><%= @book.body %></p>
+    
+    <a class="edit"><%= link_to "Edit", "/books/#{@book.id}/edit" %></a>
+    |
+    <a class="Back"><%= link_to "Back", "https://379991ad25cd42d4a8ac42e2dc0fe887.vfs.cloud9.us-east-1.amazonaws.com/books" %></a>
+    
+    <style>
+    body {
+      margin: 33px;
+      font-size: 13px;
+      line-height: 18px;
+    }
+    
+    p {
+      margin: 33px;
+    }
+    
+    </style>
+    
+  </body>
+</html>
