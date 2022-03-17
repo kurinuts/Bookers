@@ -2,19 +2,32 @@
   <head></head>
   <body>
     <h1><strong>Editing Book</strong></h1>
-    <%= form_with model: @book, url: update_book_path(@book.id), method: :patch do |f| %>
+    
+  <% if @book.errors.any? %>
+  <div id="errorExplanation">
+  <h2><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
+  
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  </div>
+ <% end %>
+    
+    <%= form_with model: @book do |f| %>
     
     <div class="field">
       <label for="book_title">Title</label><br>
-      <input class="book_title" type="text" name="book[title]" id="book_title">
+      <%= f.text_field :title %>
     </div>
     
     <div class="field">
       <label for="book_body">Body</label><br>
-      <textarea class="book_body" name="book[body]" id="book_body"></textarea>
+      <%= f.text_area :body %>
     </div>
     
-    <div class="actions"><%= f.submit 'Update Book' %></div>
+    <%= f.submit 'Update Book' %>
     <% end %>
     
     <a class="show"><%= link_to "Show", "/books/#{@book.id}" %></a>
