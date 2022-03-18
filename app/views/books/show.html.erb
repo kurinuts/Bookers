@@ -13,9 +13,9 @@
     
     <p><strong>Body:</strong><%= @book.body %></p>
     
-    <a class="edit"><%= link_to "Edit", "/books/#{@book.id}/edit" %></a>
+    <a class="edit"><%= link_to "Edit", edit_book_path %></a>
     |
-    <a class="Back"><%= link_to "Back", "https://379991ad25cd42d4a8ac42e2dc0fe887.vfs.cloud9.us-east-1.amazonaws.com/books" %></a>
+    <a class="Back"><%= link_to "Back", books_path %></a>
     
     <style>
     body {
