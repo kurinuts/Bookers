@@ -31,9 +31,9 @@
     </div>
     <% end %>
     
-    <a class="show"><%= link_to "Show", books_path %></a>
+    <%= link_to "Show", book_path(@book.id), class: "css" %>
     |
-    <a class="Back"><%= link_to "Back", book_path %></a>
+    <%= link_to "Back", books_path, class: "css" %>
     
     <style>
   

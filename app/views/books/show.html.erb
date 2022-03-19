@@ -1,8 +1,8 @@
 <html>
   <head>
-    
+
   </head>
-  
+
   <body>
      <% if flash[:notice] %>
     <div class="flash">
@@ -10,28 +10,27 @@
     </div>
   <% end %>
     <p><strong>Title:</strong><%= @book.title %></p>
-    
+
     <p><strong>Body:</strong><%= @book.body %></p>
     
-    <a class="edit"><%= link_to "Edit", edit_book_path %></a>
-    |
-    <a class="Back"><%= link_to "Back", books_path %></a>
-    
+   <%= link_to "Edit", edit_book_path(@book.id), class: "css" %>
+   |
+   <%= link_to "Back", books_path, class: "css" %>
     <style>
     body {
       margin: 33px;
       font-size: 13px;
       line-height: 18px;
     }
-    
+
     p {
       margin: 33px;
     }
-    
+
     #notice {
       color: green;
     }
     </style>
-    
+
   </body>
 </html>
